@@ -1,5 +1,5 @@
 mod hello_world;
-
+mod string_formatting;
 #[cfg(test)]
 mod tests {
     #[test]
