@@ -1,6 +1,20 @@
+### General Notes:
 Cargo crates seem to require either a `src/main.rs` or `src/lib.rs`
 file. `main.rs` requires imports to be used since it compiles to a binary.
 `lib.rs` does not, since it's a library.
+
+### Primitives:
+- signed integers: `i8`, `i16`, `i32`, `i64`, `i128` and `isize` (pointer size)
+- unsigned integers: `u8`, `u16`, `u32`, `u64`, `u128` and `usize` (pointer size)
+- floating point: `f32`, `f64`
+- `char` Unicode scalar values like `'a'`, `'α'` and `'∞'` (4 bytes each)
+- `bool` either `true` or `false`
+- unit type `()`, whose only possible value is an empty tuple: ()
+
+### Compound types:
+- Arrays: `[1, 2, 3]`
+- Tuples: `(1, 2, 3)`
+
 
 ### Unit Testing:
 It seems like it makes sense to add unit testing to the file

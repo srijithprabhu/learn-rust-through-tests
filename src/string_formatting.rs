@@ -44,7 +44,7 @@ mod tests {
     }
 
     #[test]
-    fn testCityDisplay() {
+    fn test_city_display() {
         for testcase in [
             CityTestCase {
                 city: City { name: "Dublin", lat: 53.347778, lon: -6.259722},
@@ -65,31 +65,31 @@ mod tests {
 
     struct ColorTestCase {
         color: Color,
-        expectedDebug: String,
-        expectedDisplay: String
+        expected_debug: String,
+        expected_display: String
     }
 
     #[test]
-    fn testColorPrint() {
+    fn test_color_print() {
         for testcase in [
             ColorTestCase {
                 color: Color { red: 128, green: 255, blue: 90 },
-                expectedDebug: String::from("Color { red: 128, green: 255, blue: 90 }"),
-                expectedDisplay: String::from("RGB (128, 255, 90) 0x80FF5A")
+                expected_debug: String::from("Color { red: 128, green: 255, blue: 90 }"),
+                expected_display: String::from("RGB (128, 255, 90) 0x80FF5A")
             },
             ColorTestCase {
                 color: Color { red: 0, green: 3, blue: 254 },
-                expectedDebug: String::from("Color { red: 0, green: 3, blue: 254 }"),
-                expectedDisplay: String::from("RGB (0, 3, 254) 0x0003FE")
+                expected_debug: String::from("Color { red: 0, green: 3, blue: 254 }"),
+                expected_display: String::from("RGB (0, 3, 254) 0x0003FE")
             },
             ColorTestCase {
                 color: Color { red: 0, green: 0, blue: 0 },
-                expectedDebug: String::from("Color { red: 0, green: 0, blue: 0 }"),
-                expectedDisplay: String::from("RGB (0, 0, 0) 0x000000")
+                expected_debug: String::from("Color { red: 0, green: 0, blue: 0 }"),
+                expected_display: String::from("RGB (0, 0, 0) 0x000000")
             }
         ] {
-            assert_eq!(testcase.expectedDebug, format!("{:?}", testcase.color));
-            assert_eq!(testcase.expectedDisplay, format!("{}", testcase.color));
+            assert_eq!(testcase.expected_debug, format!("{:?}", testcase.color));
+            assert_eq!(testcase.expected_display, format!("{}", testcase.color));
         }
     }
 }
