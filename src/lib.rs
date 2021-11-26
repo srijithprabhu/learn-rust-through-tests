@@ -1,6 +1,7 @@
 mod hello_world;
 mod string_formatting;
 mod tuples_arrays_and_slices;
+mod structs;
 
 #[cfg(test)]
 mod tests {
