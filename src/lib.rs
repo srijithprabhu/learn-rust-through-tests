@@ -3,6 +3,7 @@ mod string_formatting;
 mod tuples_arrays_and_slices;
 mod structs;
 mod types;
+mod conversion;
 
 #[cfg(test)]
 mod tests {
