@@ -30,7 +30,6 @@ impl From<i32> for Number {
     }
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -59,5 +58,14 @@ mod tests {
         assert_eq!(result, Ok(EvenNumber(8)));
         let result: Result<EvenNumber, ()> = 5i32.try_into();
         assert_eq!(result, Err(()));
+    }
+
+    #[test]
+    fn test_string_parse() {
+        let parsed: i32 = "5".parse().unwrap();
+        let turbo_parsed = "10".parse::<i32>().unwrap();
+
+        assert_eq!(5, parsed);
+        assert_eq!(10, turbo_parsed);
     }
 }
